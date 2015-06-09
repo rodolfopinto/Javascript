@@ -1,14 +1,12 @@
-
-
 var trsPacientes = document.getElementsByClassName("paciente");
 
+percorreArray(trsPacientes , imprimeNome); 
 
+function imprimeNome(pacienteTr){
 
-percorreArray(trsPacientes,
+for (var posicaoAtual = 0; posicaoAtual <= trsPacientes.length - 1; posicaoAtual++){
 
-function (pacienteTr){
-
-
+	var pacienteTr = trsPacientes[posicaoAtual];
 
     var tdNome = pacienteTr.getElementsByClassName("info-nome")[0];
     var tdPeso = pacienteTr.getElementsByClassName("info-peso")[0];
@@ -38,19 +36,10 @@ function (pacienteTr){
 
                          }};
 
-    var imc = pacienteAtual.pegaImc();
-    
-    var tdImc= pacienteTr.getElementsByClassName("info-imc")[0];
-   
-    tdImc.textContent = imc;
-    
-    
+                         console.log(pacienteAtual.nome);
 
-    console.log(imc);
-
-	
+}
 
 
-});
-
+}
 
